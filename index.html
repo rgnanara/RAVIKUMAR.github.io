@@ -24,6 +24,12 @@ alert('Error:' + response.errorMessage);
 }
 }});
 }
+// traps the login event to show the logout link
+gigya.socialize.addEventHandlers({
+onLogin: function () {
+document.getElementById("logout").hidden=false;
+}
+});
 </script>
    </body>
 </html>
